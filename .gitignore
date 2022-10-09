@@ -1,0 +1,4 @@
+.vagrant/
+*.bin
+*.py
+*.mpy
