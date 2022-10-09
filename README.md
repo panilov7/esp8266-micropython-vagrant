@@ -48,17 +48,16 @@ This will produce binary images in the `build-GENERIC/` subdirectory. Substitute
 
 # Installing
 
-After a successful build there sould be a `firmware-combined.bin` file inside the `build-GENERIC/` subdirectory (depending of course on whichever board you're using).
+After a successful build there should be a `firmware-combined.bin` file inside the `build-GENERIC/` subdirectory (depending of course on whichever board you're using).
 
 The `build-GENERIC/firmware-combined.bin` file can be copied to Vagrant's shared directory so it is accessible from your main computer. 
-To do thid run:
+To do this run:
 
-    cp ./build-GENERIC/firmware-combined.bin /vagrant/
-
+    cp build-GENERIC/firmware-combined.bin /vagrant/
 
 Now on your machine (not on the VM!) look inside the folder with the Vagrantfile and you should see the firmware-combined.bin file.
 
-Now the file can be [flashed the usual way](https://docs.micropython.org/en/latest/esp8266/tutorial/intro.html#deploying-the-firmware) to the ESP8266 from your machine:
+Now the file can be [flashed](https://docs.micropython.org/en/latest/esp8266/tutorial/intro.html#deploying-the-firmware) to the ESP8266 from your machine:
 
     esptool.py --port /dev/ttyUSB0 erase_flash
 
